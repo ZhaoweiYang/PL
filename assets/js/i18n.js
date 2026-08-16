@@ -42,6 +42,7 @@
         privacy: 'Privacy',
         faq: 'FAQ',
         support: 'Support Center',
+        supportShort: 'Support',
         cta: 'Get the app'
       },
       hero: {
@@ -315,6 +316,7 @@
         privacy: 'プライバシー',
         faq: 'よくある質問',
         support: 'サポートセンター',
+        supportShort: 'サポート',
         cta: 'アプリを入手'
       },
       hero: {
@@ -573,6 +575,7 @@
         privacy: '隱私',
         faq: '常見問題',
         support: '客服中心',
+        supportShort: '客服中心',
         cta: '下載 App'
       },
       hero: {

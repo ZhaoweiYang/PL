@@ -1478,6 +1478,108 @@ a:hover {
   gap: 0.6rem;
 }
 
+/* ========================================================== SUPPORT FAB == */
+
+/* A persistent, deliberately loud route to the Support Center. Sits above the
+   page on every screen; the Support Center itself does not render one. */
+.support-fab {
+  position: fixed;
+  z-index: 45;
+  inset-inline-end: clamp(1rem, 3vw, 1.75rem);
+  inset-block-end: calc(clamp(1rem, 3vw, 1.75rem) + env(safe-area-inset-bottom, 0px));
+
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+
+  padding: 0.85rem 1.35rem;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--accent-on) 22%, transparent);
+
+  background: var(--accent);
+  color: var(--accent-on);
+  font: inherit;
+  font-weight: 650;
+  font-size: 0.95rem;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+
+  box-shadow: 0 10px 26px -6px color-mix(in srgb, var(--accent) 55%, transparent),
+    0 3px 10px rgba(36, 25, 29, 0.18);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+}
+
+.support-fab:hover,
+.support-fab:focus-visible {
+  color: var(--accent-on);
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 34px -6px color-mix(in srgb, var(--accent) 62%, transparent),
+    0 4px 12px rgba(36, 25, 29, 0.22);
+}
+
+.support-fab:active {
+  transform: translateY(0);
+}
+
+.support-fab__icon {
+  width: 20px;
+  height: 20px;
+  flex: none;
+}
+
+/* One slow attention ring shortly after load, then it stops asking. */
+.support-fab::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: inherit;
+  border: 2px solid var(--accent);
+  opacity: 0;
+  pointer-events: none;
+  animation: fab-ring 2.6s ease-out 1.2s 3;
+}
+
+@keyframes fab-ring {
+  0% {
+    opacity: 0.65;
+    transform: scale(1);
+  }
+  70%,
+  100% {
+    opacity: 0;
+    transform: scale(1.28);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .support-fab::before {
+    animation: none;
+  }
+}
+
+/* On phones the label would crowd the thumb zone, so the button becomes a
+   circle — the icon plus its accessible name still carry the meaning. */
+@media (max-width: 560px) {
+  .support-fab {
+    padding: 0;
+    width: 56px;
+    height: 56px;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .support-fab__label {
+    display: none;
+  }
+
+  .support-fab__icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
 /* the honeypot must be reachable by bots and invisible to everyone else */
 .hp-field {
   position: absolute;
