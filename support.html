@@ -1,0 +1,689 @@
+<!doctype html>
+<html lang="en" data-page="support">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Support Center — PleasureLab</title>
+    <meta
+      name="description"
+      content="Submit a product suggestion, request a refund, or cancel your subscription. The PleasureLab team replies within 2 business days."
+    />
+    <meta name="theme-color" content="#fdfaf8" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#161013" media="(prefers-color-scheme: dark)" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="PleasureLab" />
+    <meta property="og:title" content="Support Center — PleasureLab" />
+    <meta property="og:description" content="Product suggestions, refunds and subscription cancellations." />
+    <meta property="og:locale" content="en" />
+
+    <link rel="alternate" hreflang="en" href="./support.html?lang=en" />
+    <link rel="alternate" hreflang="ja" href="./support.html?lang=ja" />
+    <link rel="alternate" hreflang="zh-Hant" href="./support.html?lang=zh-Hant" />
+    <link rel="alternate" hreflang="x-default" href="./support.html" />
+
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('pl.theme');
+          if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main" data-i18n="common.skipToContent">Skip to content</a>
+
+    <header class="site-header" data-header data-open="false">
+      <div class="wrap site-header__inner">
+        <a class="brand" href="./">
+          <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+            <rect width="32" height="32" rx="9" fill="currentColor" opacity=".1" />
+            <path
+              d="M16 24.5s-7.5-4.6-7.5-9.7A4.3 4.3 0 0 1 16 12a4.3 4.3 0 0 1 7.5 2.8c0 5.1-7.5 9.7-7.5 9.7Z"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.9"
+              stroke-linejoin="round"
+            />
+            <circle cx="16" cy="9" r="2.2" fill="none" stroke="currentColor" stroke-width="1.9" />
+          </svg>
+          <span>PleasureLab</span>
+        </a>
+
+        <button
+          class="btn btn--ghost btn--sm nav-toggle"
+          type="button"
+          data-nav-toggle
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Menu"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="Main">
+          <a class="site-nav__link" href="index.html#features" data-i18n="nav.features">Features</a>
+          <a class="site-nav__link" href="index.html#privacy" data-i18n="nav.privacy">Privacy</a>
+          <a class="site-nav__link" href="index.html#faq" data-i18n="nav.faq">FAQ</a>
+          <a class="site-nav__link" href="support.html" aria-current="page" data-i18n="nav.support">Support Center</a>
+          <a class="btn btn--primary btn--sm" href="index.html#get" data-store="ios" data-i18n="nav.cta">Get the app</a>
+        </nav>
+
+        <div class="header-tools">
+          <span class="picker">
+            <label class="visually-hidden" for="lang-select" data-i18n="common.language">Language</label>
+            <select class="picker__select" id="lang-select" data-lang-picker></select>
+          </span>
+          <span class="picker">
+            <label class="visually-hidden" for="theme-select" data-i18n="common.theme">Theme</label>
+            <select class="picker__select" id="theme-select" data-theme-picker>
+              <option value="system" data-i18n="common.themeSystem">System</option>
+              <option value="light" data-i18n="common.themeLight">Light</option>
+              <option value="dark" data-i18n="common.themeDark">Dark</option>
+            </select>
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="support-hero">
+        <div class="wrap">
+          <span class="eyebrow" data-i18n="support.eyebrow">Support Center</span>
+          <h1 data-i18n="support.title">How can we help?</h1>
+          <p class="lede" data-i18n="support.subtitle">Pick a request type below.</p>
+
+          <div class="info-row">
+            <div class="info-card">
+              <div class="info-card__label" data-i18n="support.slaTitle">Response time</div>
+              <div class="info-card__value" data-i18n="support.slaBody">Within 2 business days</div>
+            </div>
+            <div class="info-card">
+              <div class="info-card__label" data-i18n="support.langTitle">Reply language</div>
+              <div class="info-card__value" data-i18n="support.langBody">English, 日本語, 繁體中文</div>
+            </div>
+            <div class="info-card">
+              <div class="info-card__label" data-i18n="support.emailTitle">Prefer email?</div>
+              <div class="info-card__value">
+                <a href="#" data-support-email data-support-email-text>support@pleasurelab.app</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top: 0">
+        <div class="wrap">
+          <!-- ------------------------------------------------------- tabs -->
+          <div class="tabs" role="tablist" aria-label="Request type">
+            <button class="tab" type="button" role="tab" data-tab="suggestion" aria-selected="true" aria-controls="panel-suggestion" id="tab-suggestion">
+              <span class="tab__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M9 18h6M10 22h4" />
+                  <path d="M12 2a7 7 0 0 0-4 12.7V16h8v-1.3A7 7 0 0 0 12 2Z" />
+                </svg>
+              </span>
+              <span>
+                <span class="tab__title" data-i18n="support.tabSuggestion">Product suggestion</span>
+                <span class="tab__hint" data-i18n="support.tabSuggestionHint">Ideas, feedback, bug reports</span>
+              </span>
+            </button>
+
+            <button class="tab" type="button" role="tab" data-tab="refund" aria-selected="false" aria-controls="panel-refund" id="tab-refund">
+              <span class="tab__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M3 10h18M3 10a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2M3 10v8a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-8" />
+                  <path d="m9 16-2-2 2-2" />
+                  <path d="M7 14h6a3 3 0 0 0 0-6" />
+                </svg>
+              </span>
+              <span>
+                <span class="tab__title" data-i18n="support.tabRefund">Refund request</span>
+                <span class="tab__hint" data-i18n="support.tabRefundHint">Get a charge reversed</span>
+              </span>
+            </button>
+
+            <button class="tab" type="button" role="tab" data-tab="cancel" aria-selected="false" aria-controls="panel-cancel" id="tab-cancel">
+              <span class="tab__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M8 2v4M16 2v4M3 10h18" />
+                  <rect x="3" y="4" width="18" height="18" rx="2" />
+                  <path d="m10 15 4 4M14 15l-4 4" />
+                </svg>
+              </span>
+              <span>
+                <span class="tab__title" data-i18n="support.tabCancel">Cancel subscription</span>
+                <span class="tab__hint" data-i18n="support.tabCancelHint">Stop future billing</span>
+              </span>
+            </button>
+          </div>
+
+          <!-- ================================================ SUGGESTION == -->
+          <div class="panel" role="tabpanel" id="panel-suggestion" aria-labelledby="tab-suggestion" data-type="suggestion" hidden>
+            <div class="alert alert--error" data-form-alert hidden role="alert">
+              <p data-form-alert-text></p>
+            </div>
+
+            <div data-form-wrap>
+              <p class="panel__intro" data-i18n="support.sugIntro">Tell us what would make PleasureLab better.</p>
+
+              <form novalidate autocomplete="on">
+                <div class="hp-field" aria-hidden="true">
+                  <label>Leave this empty<input type="text" name="_hp" tabindex="-1" autocomplete="off" /></label>
+                </div>
+
+                <div class="field-grid">
+                  <div class="field">
+                    <label class="field__label" for="sug-name">
+                      <span data-i18n="support.name">Name or nickname</span>
+                      <span class="field__flag" data-i18n="common.optional">Optional</span>
+                    </label>
+                    <input class="input" type="text" id="sug-name" name="name" autocomplete="nickname"
+                      data-summary="support.name" data-i18n-placeholder="support.namePlaceholder" />
+                    <p class="field__error" data-error></p>
+                  </div>
+
+                  <div class="field">
+                    <label class="field__label" for="sug-email">
+                      <span data-i18n="support.email">Email address</span>
+                      <span class="field__flag" data-i18n="common.optional">Optional</span>
+                    </label>
+                    <input class="input" type="email" id="sug-email" name="email" autocomplete="email"
+                      data-summary="support.email" data-i18n-placeholder="support.emailPlaceholder" />
+                    <p class="field__help" data-i18n="support.emailHelpOptional">Optional — but we can only reply if you leave one.</p>
+                    <p class="field__error" data-error></p>
+                  </div>
+
+                  <div class="field">
+                    <label class="field__label" for="sug-category">
+                      <span data-i18n="support.sugCategory">What is this about?</span>
+                      <span class="field__flag field__flag--required" data-i18n="common.required">Required</span>
+                    </label>
+                    <select class="select" id="sug-category" name="category" required data-summary="support.sugCategory">
+                      <option value=""></option>
+                      <option value="feature" data-i18n="support.sugCatFeature">A feature idea</option>
+                      <option value="content" data-i18n="support.sugCatContent">Content or a lesson</option>
+                      <option value="bug" data-i18n="support.sugCatBug">Something is broken</option>
+                      <option value="ux" data-i18n="support.sugCatUx">Design or usability</option>
+                      <option value="other" data-i18n="support.sugCatOther">Something else</option>
+                    </select>
+                    <p class="field__error" data-error></p>
+                  </div>
+
+                  <div class="field">
+                    <label class="field__label" for="sug-device">
+                      <span data-i18n="support.sugDevice">Device and app version</span>
+                      <span class="field__flag" data-i18n="common.optional">Optional</span>
+                    </label>
+                    <input class="input" type="text" id="sug-device" name="device"
+                      data-summary="support.sugDevice" data-i18n-placeholder="support.sugDevicePlaceholder" />
+                    <p class="field__error" data-error></p>
+                  </div>
+
+                  <div class="field field--wide">
+                    <label class="field__label" for="sug-message">
+                      <span data-i18n="support.message">Details</span>
+                      <span class="field__flag field__flag--required" data-i18n="common.required">Required</span>
+                    </label>
+                    <textarea class="textarea" id="sug-message" name="message" required
+                      data-summary="support.message" data-i18n-placeholder="support.sugMessagePlaceholder"></textarea>
+                    <p class="field__error" data-error></p>
+                  </div>
+
+                  <div class="field field--wide">
+                    <label class="check" for="sug-consent">
+                      <input type="checkbox" id="sug-consent" name="consent" required data-summary="support.consentLabel" data-summary-quiet />
+                      <span data-i18n="support.consentLabel">I understand PleasureLab will process the information above.</span>
+                    </label>
+                    <p class="field__error" data-error></p>
+                  </div>
+                </div>
+
+                <div class="form-actions">
+                  <button class="btn btn--primary" type="submit" data-submit>
+                    <span data-submit-label data-i18n="support.submit">Submit request</span>
+                  </button>
+                  <button class="btn btn--quiet" type="button" data-clear data-i18n="support.clear">Clear form</button>
+                </div>
+              </form>
+            </div>
+
+            <div class="result" data-result hidden>
+              <div class="result__badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>
+              </div>
+              <h2 data-i18n="support.okTitle">Thank you — your request is in.</h2>
+              <p data-result-body></p>
+              <div class="ticket">
+                <span class="ticket__label" data-i18n="support.okTicket">Your ticket reference</span>
+                <span class="ticket__code" data-ticket-code></span>
+                <button class="btn btn--ghost btn--sm" type="button" data-copy-ticket data-i18n="support.okCopy">Copy reference</button>
+              </div>
+              <div>
+                <button class="btn btn--quiet" type="button" data-another data-i18n="support.okAnother">Submit another request</button>
+              </div>
+
+              <div class="fallback" data-fallback hidden>
+                <h3 data-i18n="support.fbTitle">Send this by email</h3>
+                <p class="fallback__body" data-fallback-body></p>
+                <pre class="fallback__pre" data-fallback-pre></pre>
+                <div class="fallback__actions">
+                  <button class="btn btn--primary btn--sm" type="button" data-mail-summary data-i18n="support.fbMail">Open email app</button>
+                  <button class="btn btn--ghost btn--sm" type="button" data-copy-summary data-i18n="support.fbCopy">Copy summary</button>
+                  <button class="btn btn--ghost btn--sm" type="button" data-download-summary data-i18n="support.fbDownload">Download summary</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ==================================================== REFUND == -->
+          <div class="panel" role="tabpanel" id="panel-refund" aria-labelledby="tab-refund" data-type="refund" hidden>
+            <div class="alert alert--error" data-form-alert hidden role="alert">
+              <p data-form-alert-text></p>
+            </div>
+
+            <div data-form-wrap>
+              <p class="panel__intro" data-i18n="support.refIntro">Refunds are available within 14 days of the charge.</p>
+
+              <form novalidate autocomplete="on">
+                <div class="hp-field" aria-hidden="true">
+                  <label>Leave this empty<input type="text" name="_hp" tabindex="-1" autocomplete="off" /></label>
+                </div>
+
+                <div class="field-grid">
+                  <div class="field">
+                    <label class="field__label" for="ref-email">
+                      <span data-i18n="support.email">Email address</span>
+                      <span class="field__flag field__flag--required" data-i18n="common.required">Required</span>
+                    </label>
+                    <input class="input" type="email" id="ref-email" name="email" required autocomplete="email"
+                      data-summary="support.email" data-i18n-placeholder="support.emailPlaceholder" />
+                    <p class="field__help" data-i18n="support.emailHelpRequired">This must be the email used for the purchase.</p>
+                    <p class="field__error" data-error></p>
+                  </div>
+
+                  <div class="field">
+                    <label class="field__label" for="ref-platform">
+                      <span data-i18n="support.refPlatform">Where did you pay?</span>
+                      <span class="field__flag field__flag--required" data-i18n="common.required">Required</span>
+                    </label>
+                    <select class="select" id="ref-platform" name="platform" required data-summary="support.refPlatform">
+                      <option value=""></option>
+                      <option value="apple" data-i18n="support.refPlatformApple">App Store (Apple)</option>
+                      <option value="google" data-i18n="support.refPlatformGoogle">Google Play</option>
+                      <option value="web" data-i18n="support.refPlatformWeb">Our website (card)</option>
+                      <option value="other" data-i18n="support.refPlatformOther">Somewhere else</option>
+                    </select>
+                    <p class="field__error" data-error></p>
+                  </div>
+
+                  <div class="field">
+                    <label class="field__label" for="ref-order">
+                      <span data-i18n="support.refOrderId">Order or transaction ID</span>
+                      <span class="field__flag" data-i18n="common.optional">Optional</span>
+                    </label>
+                    <input class="input" type="text" id="ref-order" name="order_id"
+                      data-summary="support.refOrderId" data-i18n-placeholder="support.refOrderPlaceholder" />
+                    <p class="field__error" data-error></p>
+                  </div>
+
+                  <div class="field">
+                    <label class="field__label" for="ref-amount">
+                      <span data-i18n="support.refAmount">Amount charged</span>
+                      <span class="field__flag" data-i18n="common.optional">Optional</span>
+                    </label>
+                    <input class="input" type="text" id="ref-amount" name="amount" inputmode="decimal"
+                      data-summary="support.refAmount" data-i18n-placeholder="support.refAmountPlaceholder" />
+                    <p class="field__error" data-error></p>
+                  </div>
+
+                  <div class="field">
+                    <label class="field__label" for="ref-date">
+                      <span data-i18n="support.refDate">Date of the charge</span>
+                      <span class="field__flag" data-i18n="common.optional">Optional</span>
+                    </label>
+                    <input class="input" type="date" id="ref-date" name="charged_at" data-summary="support.refDate" />
+                    <p class="field__error" data-error></p>
+                  </div>
+
+                  <div class="field">
+                    <label class="field__label" for="ref-reason">
+                      <span data-i18n="support.refReason">Why are you requesting a refund?</span>
+                      <span class="field__flag field__flag--required" data-i18n="common.required">Required</span>
+                    </label>
+                    <select class="select" id="ref-reason" name="reason" required data-summary="support.refReason">
+                      <option value=""></option>
+                      <option value="accidental" data-i18n="support.refReasonAccident">I did not mean to buy it</option>
+                      <option value="duplicate" data-i18n="support.refReasonDuplicate">I was charged twice</option>
+                      <option value="unauthorized" data-i18n="support.refReasonUnauthorized">I did not authorise this charge</option>
+                      <option value="expectation" data-i18n="support.refReasonExpectation">The app is not what I expected</option>
+                      <option value="technical" data-i18n="support.refReasonTechnical">Technical problems</option>
+                      <option value="other" data-i18n="support.refReasonOther">Another reason</option>
+                    </select>
+                    <p class="field__error" data-error></p>
+                  </div>
+
+                  <!-- billing screenshot -->
+                  <div class="field field--wide upload-field">
+                    <span class="field__label">
+                      <span data-i18n="support.uploadLabel">Billing screenshot</span>
+                      <span class="field__flag field__flag--required" data-i18n="common.required">Required</span>
+                    </span>
+
+                    <div class="upload">
+                      <svg class="upload__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="3" y="3" width="18" height="18" rx="2" />
+                        <circle cx="9" cy="9" r="2" />
+                        <path d="m21 15-4.5-4.5L7 21" />
+                      </svg>
+                      <button class="btn btn--ghost btn--sm" type="button" data-upload-chooser data-i18n="support.uploadCta">Choose a file</button>
+                      <p class="upload__drop" data-i18n="support.uploadDrop">or drag it here</p>
+                      <input class="upload__input" type="file" id="ref-file" name="screenshot_name"
+                        data-require-file data-summary="support.uploadLabel"
+                        aria-label="Billing screenshot" />
+                    </div>
+
+                    <div class="preview" data-preview hidden>
+                      <img class="preview__thumb" alt="" data-preview-thumb />
+                      <div>
+                        <div class="preview__name" data-preview-name></div>
+                        <div class="preview__size" data-preview-size></div>
+                      </div>
+                      <div class="preview__actions">
+                        <button class="btn btn--ghost btn--sm" type="button" data-upload-replace data-i18n="support.uploadReplace">Replace</button>
+                        <button class="btn btn--quiet btn--sm" type="button" data-upload-remove data-i18n="support.uploadRemove">Remove</button>
+                      </div>
+                    </div>
+
+                    <p class="field__help" data-upload-help></p>
+                    <p class="field__error" data-error></p>
+                    <p class="alert alert--tip" data-i18n="support.uploadRedactTip">Hide anything you do not want us to see.</p>
+                  </div>
+
+                  <div class="field field--wide">
+                    <label class="field__label" for="ref-message">
+                      <span data-i18n="support.message">Details</span>
+                      <span class="field__flag" data-i18n="common.optional">Optional</span>
+                    </label>
+                    <textarea class="textarea" id="ref-message" name="message"
+                      data-summary="support.message" data-i18n-placeholder="support.refMessagePlaceholder"></textarea>
+                    <p class="field__error" data-error></p>
+                  </div>
+
+                  <div class="field field--wide">
+                    <p class="alert alert--warn" data-i18n="support.refNote" style="margin-bottom: 0">
+                      Purchases made through the App Store or Google Play are refunded by the platform.
+                    </p>
+                  </div>
+
+                  <div class="field field--wide">
+                    <label class="check" for="ref-consent">
+                      <input type="checkbox" id="ref-consent" name="consent" required data-summary="support.consentLabel" data-summary-quiet />
+                      <span data-i18n="support.consentLabel">I understand PleasureLab will process the information above.</span>
+                    </label>
+                    <p class="field__error" data-error></p>
+                  </div>
+                </div>
+
+                <div class="form-actions">
+                  <button class="btn btn--primary" type="submit" data-submit>
+                    <span data-submit-label data-i18n="support.submit">Submit request</span>
+                  </button>
+                  <button class="btn btn--quiet" type="button" data-clear data-i18n="support.clear">Clear form</button>
+                </div>
+              </form>
+            </div>
+
+            <div class="result" data-result hidden>
+              <div class="result__badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>
+              </div>
+              <h2 data-i18n="support.okTitle">Thank you — your request is in.</h2>
+              <p data-result-body></p>
+              <div class="ticket">
+                <span class="ticket__label" data-i18n="support.okTicket">Your ticket reference</span>
+                <span class="ticket__code" data-ticket-code></span>
+                <button class="btn btn--ghost btn--sm" type="button" data-copy-ticket data-i18n="support.okCopy">Copy reference</button>
+              </div>
+              <div>
+                <button class="btn btn--quiet" type="button" data-another data-i18n="support.okAnother">Submit another request</button>
+              </div>
+
+              <div class="fallback" data-fallback hidden>
+                <h3 data-i18n="support.fbTitle">Send this by email</h3>
+                <p class="fallback__body" data-fallback-body></p>
+                <pre class="fallback__pre" data-fallback-pre></pre>
+                <div class="fallback__actions">
+                  <button class="btn btn--primary btn--sm" type="button" data-mail-summary data-i18n="support.fbMail">Open email app</button>
+                  <button class="btn btn--ghost btn--sm" type="button" data-copy-summary data-i18n="support.fbCopy">Copy summary</button>
+                  <button class="btn btn--ghost btn--sm" type="button" data-download-summary data-i18n="support.fbDownload">Download summary</button>
+                </div>
+                <p class="field__help" data-i18n="support.fbAttach" style="margin-top: 0.75rem">
+                  Remember to attach the screenshot.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ==================================================== CANCEL == -->
+          <div class="panel" role="tabpanel" id="panel-cancel" aria-labelledby="tab-cancel" data-type="cancel" hidden>
+            <div class="alert alert--error" data-form-alert hidden role="alert">
+              <p data-form-alert-text></p>
+            </div>
+
+            <div data-form-wrap>
+              <p class="panel__intro" data-i18n="support.canIntro">Cancelling stops all future charges.</p>
+
+              <form novalidate autocomplete="on">
+                <div class="hp-field" aria-hidden="true">
+                  <label>Leave this empty<input type="text" name="_hp" tabindex="-1" autocomplete="off" /></label>
+                </div>
+
+                <div class="field-grid">
+                  <div class="field">
+                    <label class="field__label" for="can-email">
+                      <span data-i18n="support.email">Email address</span>
+                      <span class="field__flag field__flag--required" data-i18n="common.required">Required</span>
+                    </label>
+                    <input class="input" type="email" id="can-email" name="email" required autocomplete="email"
+                      data-summary="support.email" data-i18n-placeholder="support.emailPlaceholder" />
+                    <p class="field__help" data-i18n="support.emailHelpRequired">This must be the email used for the purchase.</p>
+                    <p class="field__error" data-error></p>
+                  </div>
+
+                  <div class="field">
+                    <label class="field__label" for="can-plan">
+                      <span data-i18n="support.canPlan">Which plan are you on?</span>
+                      <span class="field__flag field__flag--required" data-i18n="common.required">Required</span>
+                    </label>
+                    <select class="select" id="can-plan" name="plan" required data-summary="support.canPlan">
+                      <option value=""></option>
+                      <option value="monthly" data-i18n="support.canPlanMonthly">Plus — monthly</option>
+                      <option value="yearly" data-i18n="support.canPlanYearly">Plus — yearly</option>
+                      <option value="trial" data-i18n="support.canPlanTrial">Free trial</option>
+                      <option value="unknown" data-i18n="support.canPlanUnknown">I am not sure</option>
+                    </select>
+                    <p class="field__error" data-error></p>
+                  </div>
+
+                  <div class="field">
+                    <label class="field__label" for="can-platform">
+                      <span data-i18n="support.refPlatform">Where did you pay?</span>
+                      <span class="field__flag field__flag--required" data-i18n="common.required">Required</span>
+                    </label>
+                    <select class="select" id="can-platform" name="platform" required data-summary="support.refPlatform">
+                      <option value=""></option>
+                      <option value="apple" data-i18n="support.refPlatformApple">App Store (Apple)</option>
+                      <option value="google" data-i18n="support.refPlatformGoogle">Google Play</option>
+                      <option value="web" data-i18n="support.refPlatformWeb">Our website (card)</option>
+                      <option value="other" data-i18n="support.refPlatformOther">Somewhere else</option>
+                    </select>
+                    <p class="field__error" data-error></p>
+                  </div>
+
+                  <div class="field">
+                    <label class="field__label" for="can-reason">
+                      <span data-i18n="support.canReason">Why are you leaving?</span>
+                      <span class="field__flag field__flag--required" data-i18n="common.required">Required</span>
+                    </label>
+                    <select class="select" id="can-reason" name="reason" required data-summary="support.canReason">
+                      <option value=""></option>
+                      <option value="price" data-i18n="support.canReasonPrice">Too expensive</option>
+                      <option value="usage" data-i18n="support.canReasonUsage">I do not use it enough</option>
+                      <option value="content" data-i18n="support.canReasonContent">The content was not right for me</option>
+                      <option value="technical" data-i18n="support.canReasonTechnical">Technical problems</option>
+                      <option value="done" data-i18n="support.canReasonDone">I got what I came for</option>
+                      <option value="other" data-i18n="support.canReasonOther">Another reason</option>
+                    </select>
+                    <p class="field__error" data-error></p>
+                  </div>
+
+                  <!-- billing screenshot -->
+                  <div class="field field--wide upload-field">
+                    <span class="field__label">
+                      <span data-i18n="support.uploadLabel">Billing screenshot</span>
+                      <span class="field__flag field__flag--required" data-i18n="common.required">Required</span>
+                    </span>
+
+                    <div class="upload">
+                      <svg class="upload__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="3" y="3" width="18" height="18" rx="2" />
+                        <circle cx="9" cy="9" r="2" />
+                        <path d="m21 15-4.5-4.5L7 21" />
+                      </svg>
+                      <button class="btn btn--ghost btn--sm" type="button" data-upload-chooser data-i18n="support.uploadCta">Choose a file</button>
+                      <p class="upload__drop" data-i18n="support.uploadDrop">or drag it here</p>
+                      <input class="upload__input" type="file" id="can-file" name="screenshot_name"
+                        data-require-file data-summary="support.uploadLabel"
+                        aria-label="Billing screenshot" />
+                    </div>
+
+                    <div class="preview" data-preview hidden>
+                      <img class="preview__thumb" alt="" data-preview-thumb />
+                      <div>
+                        <div class="preview__name" data-preview-name></div>
+                        <div class="preview__size" data-preview-size></div>
+                      </div>
+                      <div class="preview__actions">
+                        <button class="btn btn--ghost btn--sm" type="button" data-upload-replace data-i18n="support.uploadReplace">Replace</button>
+                        <button class="btn btn--quiet btn--sm" type="button" data-upload-remove data-i18n="support.uploadRemove">Remove</button>
+                      </div>
+                    </div>
+
+                    <p class="field__help" data-upload-help></p>
+                    <p class="field__error" data-error></p>
+                    <p class="alert alert--tip" data-i18n="support.uploadRedactTip">Hide anything you do not want us to see.</p>
+                  </div>
+
+                  <div class="field field--wide">
+                    <label class="field__label" for="can-message">
+                      <span data-i18n="support.message">Details</span>
+                      <span class="field__flag" data-i18n="common.optional">Optional</span>
+                    </label>
+                    <textarea class="textarea" id="can-message" name="message"
+                      data-summary="support.message" data-i18n-placeholder="support.canMessagePlaceholder"></textarea>
+                    <p class="field__error" data-error></p>
+                  </div>
+
+                  <div class="field field--wide">
+                    <label class="check" for="can-delete">
+                      <input type="checkbox" id="can-delete" name="delete_account" data-summary="support.canDeleteLabel" />
+                      <span>
+                        <span data-i18n="support.canDeleteLabel">Also delete my account and all my data</span>
+                        <span class="check__help" data-i18n="support.canDeleteHelp">This is permanent and cannot be undone.</span>
+                      </span>
+                    </label>
+                    <p class="field__error" data-error></p>
+                  </div>
+
+                  <div class="field field--wide">
+                    <p class="alert alert--warn" data-i18n="support.canNote" style="margin-bottom: 0">
+                      You can also cancel yourself in your App Store or Google Play settings.
+                    </p>
+                  </div>
+
+                  <div class="field field--wide">
+                    <label class="check" for="can-consent">
+                      <input type="checkbox" id="can-consent" name="consent" required data-summary="support.consentLabel" data-summary-quiet />
+                      <span data-i18n="support.consentLabel">I understand PleasureLab will process the information above.</span>
+                    </label>
+                    <p class="field__error" data-error></p>
+                  </div>
+                </div>
+
+                <div class="form-actions">
+                  <button class="btn btn--primary" type="submit" data-submit>
+                    <span data-submit-label data-i18n="support.submit">Submit request</span>
+                  </button>
+                  <button class="btn btn--quiet" type="button" data-clear data-i18n="support.clear">Clear form</button>
+                </div>
+              </form>
+            </div>
+
+            <div class="result" data-result hidden>
+              <div class="result__badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>
+              </div>
+              <h2 data-i18n="support.okTitle">Thank you — your request is in.</h2>
+              <p data-result-body></p>
+              <div class="ticket">
+                <span class="ticket__label" data-i18n="support.okTicket">Your ticket reference</span>
+                <span class="ticket__code" data-ticket-code></span>
+                <button class="btn btn--ghost btn--sm" type="button" data-copy-ticket data-i18n="support.okCopy">Copy reference</button>
+              </div>
+              <div>
+                <button class="btn btn--quiet" type="button" data-another data-i18n="support.okAnother">Submit another request</button>
+              </div>
+
+              <div class="fallback" data-fallback hidden>
+                <h3 data-i18n="support.fbTitle">Send this by email</h3>
+                <p class="fallback__body" data-fallback-body></p>
+                <pre class="fallback__pre" data-fallback-pre></pre>
+                <div class="fallback__actions">
+                  <button class="btn btn--primary btn--sm" type="button" data-mail-summary data-i18n="support.fbMail">Open email app</button>
+                  <button class="btn btn--ghost btn--sm" type="button" data-copy-summary data-i18n="support.fbCopy">Copy summary</button>
+                  <button class="btn btn--ghost btn--sm" type="button" data-download-summary data-i18n="support.fbDownload">Download summary</button>
+                </div>
+                <p class="field__help" data-i18n="support.fbAttach" style="margin-top: 0.75rem">
+                  Remember to attach the screenshot.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-bottom" style="margin-top: 0; border-top: 0; padding-top: 0">
+          <span>© <span id="year">2026</span> PleasureLab. <span data-i18n="footer.rights">All rights reserved.</span></span>
+          <span><a href="./" data-i18n="common.backHome">Back to home</a></span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/config.js" defer></script>
+    <script src="assets/js/i18n.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/support.js" defer></script>
+    <script defer>
+      document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('year').textContent = String(new Date().getFullYear());
+      });
+    </script>
+  </body>
+</html>
