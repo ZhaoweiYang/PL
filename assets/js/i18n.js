@@ -116,7 +116,7 @@
         q4: 'How do I cancel my subscription?',
         a4: 'Open the Support Center and submit a cancellation request, or cancel directly in the App Store or Google Play subscription settings. Both routes work.',
         q5: 'Can I get a refund?',
-        a5: 'Yes, within 14 days of the charge if you have not completed a paid course. Submit a refund request with your billing screenshot and we will handle it within two business days.',
+        a5: 'Yes — every charge is covered by a no-questions-asked refund for 30 days. Submit a refund request with your billing screenshot; refunds complete within 7 to 14 business days.',
         q6: 'Who writes the content?',
         a6: 'Sex educators, physiotherapists, GPs and psychologists. Every article shows its author, reviewer and review date.'
       },
@@ -191,7 +191,7 @@
 
         /* refund */
         refIntro:
-          'Refunds are available within 14 days of the charge if you have not completed a paid course. We need your billing email and a screenshot of the charge so we can find the transaction.',
+          'Every charge is covered by a no-questions-asked refund for 30 days — you do not have to justify it. We need your billing email and a screenshot of the charge so we can find the transaction.',
         refPlatform: 'Where did you pay?',
         refPlatformApple: 'App Store (Apple)',
         refPlatformGoogle: 'Google Play',
@@ -215,7 +215,7 @@
 
         /* cancel */
         canIntro:
-          'Cancelling stops all future charges. You keep PleasureLab Plus until the end of the period you have already paid for.',
+          'Cancelling stops all future charges, no questions asked. You keep PleasureLab Plus until the end of the period you have already paid for.',
         canPlan: 'Which plan are you on?',
         canPlanMonthly: 'Plus — monthly',
         canPlanYearly: 'Plus — yearly',
@@ -261,9 +261,23 @@
         okBodySuggestion:
           'A human reads every suggestion. If we need more detail, we will email you.',
         okBodyRefund:
-          'We will review the transaction and reply within two business days with the outcome and, where the platform requires it, the exact steps to complete the refund.',
+          'We have everything we need. Nothing further is required from you.',
         okBodyCancel:
-          'We will confirm the cancellation by email. Until the end of your paid period, nothing changes inside the app.',
+          'We have everything we need. Nothing further is required from you.',
+
+        nextTitle: 'What happens next',
+        nextRef1:
+          'Your request qualifies. Every charge is refundable for 30 days, with no reason required — we will not ask you to justify it.',
+        nextRef2:
+          'The refund completes within 7 to 14 business days and returns to your original payment method. Your bank may take a further day or two to show it.',
+        nextRef3:
+          'There is nothing else to do. Please do not submit again — we will email you the moment it is done.',
+        nextCan1:
+          'Your cancellation is accepted. We do not ask for a reason and we will not try to talk you out of it.',
+        nextCan2:
+          'It completes within 7 to 14 business days, after which you will never be charged again. You keep PleasureLab Plus until the period you have paid for runs out.',
+        nextCan3:
+          'There is nothing else to do. Please do not submit again — we will email you the moment it is done.',
         okTicket: 'Your ticket reference',
         okCopy: 'Copy reference',
         okCopied: 'Copied',
@@ -387,7 +401,7 @@
         q4: '解約はどうすればいいですか？',
         a4: 'サポートセンターから解約フォームを送るか、App Store / Google Play のサブスクリプション設定から直接解約できます。どちらでも有効です。',
         q5: '返金してもらえますか？',
-        a5: '課金から 14 日以内で、有料コースを修了していなければ可能です。請求のスクリーンショットを添えて返金申請をお送りください。2 営業日以内に対応します。',
+        a5: 'はい。すべての課金は 30 日間、理由を問わず返金の対象です。請求のスクリーンショットを添えて返金申請をお送りください。7〜14 営業日以内に返金が完了します。',
         q6: '誰が書いていますか？',
         a6: '性教育者、理学療法士、医師、心理士です。すべての記事に執筆者・監修者・監修日を表示しています。'
       },
@@ -457,7 +471,7 @@
         sugDevicePlaceholder: '例：iPhone 15、iOS 18.2、PleasureLab 3.4.1',
 
         refIntro:
-          '課金から 14 日以内で、有料コースを未修了の場合に返金が可能です。取引を特定するため、お支払い時のメールアドレスと請求のスクリーンショットが必要です。',
+          'すべての課金は 30 日間、理由を問わず返金の対象です。理由をご説明いただく必要はありません。取引を特定するため、お支払い時のメールアドレスと請求のスクリーンショットが必要です。',
         refPlatform: 'お支払い先',
         refPlatformApple: 'App Store（Apple）',
         refPlatformGoogle: 'Google Play',
@@ -480,7 +494,7 @@
           'App Store・Google Play 経由のご購入は、各プラットフォームからの返金となります。対象かどうかを確認のうえ、手順をご案内するか、可能な場合は当社が代理で申請します。',
 
         canIntro:
-          '解約すると、以降の課金は停止します。すでにお支払い済みの期間の終了までは、PleasureLab Plus をそのままご利用いただけます。',
+          '解約すると、以降の課金は停止します。理由は問いません。すでにお支払い済みの期間の終了までは、PleasureLab Plus をそのままご利用いただけます。',
         canPlan: 'ご利用中のプラン',
         canPlanMonthly: 'Plus — 月額',
         canPlanYearly: 'Plus — 年額',
@@ -521,10 +535,22 @@
 
         okTitle: 'ありがとうございます。受け付けました。',
         okBodySuggestion: 'すべてのご提案に担当者が目を通します。詳細が必要な場合はメールでご連絡します。',
-        okBodyRefund:
-          '取引内容を確認し、2 営業日以内に結果をご返信します。プラットフォーム側の手続きが必要な場合は、その手順もあわせてご案内します。',
-        okBodyCancel:
-          '解約の完了をメールでご連絡します。お支払い済みの期間が終わるまで、アプリの動作は変わりません。',
+        okBodyRefund: '必要な情報はすべて受け取りました。お客様に追加のお手続きはありません。',
+        okBodyCancel: '必要な情報はすべて受け取りました。お客様に追加のお手続きはありません。',
+
+        nextTitle: 'この後の流れ',
+        nextRef1:
+          'お客様の申請は対象です。すべての課金は 30 日間、理由を問わず返金いたします。理由をお尋ねすることはありません。',
+        nextRef2:
+          '7〜14 営業日以内に返金が完了し、元のお支払い方法へ返金されます。ご利用の金融機関での反映には、さらに 1〜2 日かかる場合があります。',
+        nextRef3:
+          'お客様の側での作業はありません。再送信は不要です。完了しだいメールでお知らせしますので、安心してお待ちください。',
+        nextCan1:
+          '解約を承りました。理由はお尋ねしませんし、引き止めることもいたしません。',
+        nextCan2:
+          '7〜14 営業日以内に手続きが完了し、以降の課金は一切ありません。お支払い済みの期間が終わるまでは、PleasureLab Plus をそのままご利用いただけます。',
+        nextCan3:
+          'お客様の側での作業はありません。再送信は不要です。完了しだいメールでお知らせしますので、安心してお待ちください。',
         okTicket: '受付番号',
         okCopy: '番号をコピー',
         okCopied: 'コピーしました',
@@ -646,7 +672,7 @@
         q4: '要怎麼取消訂閱？',
         a4: '你可以在客服中心提交取消訂閱申請，或直接到 App Store／Google Play 的訂閱設定中取消，兩種方式都有效。',
         q5: '可以退款嗎？',
-        a5: '可以。扣款後 14 天內、且尚未完成付費課程即符合資格。請附上帳單截圖提交退款申請，我們會在兩個工作天內處理。',
+        a5: '可以。所有扣款在 30 天內都適用無理由退款。請附上帳單截圖提交退款申請，退款會在 7 到 14 個工作天內完成。',
         q6: '內容由誰撰寫？',
         a6: '性教育者、物理治療師、家醫科醫師與心理師。每篇文章都會顯示作者、審閱者與審閱日期。'
       },
@@ -714,7 +740,7 @@
         sugDevicePlaceholder: '例如：iPhone 15、iOS 18.2、PleasureLab 3.4.1',
 
         refIntro:
-          '扣款後 14 天內、且尚未完成付費課程即可申請退款。為了找到這筆交易，我們需要你的付款電子郵件與帳單截圖。',
+          '所有扣款在 30 天內都適用無理由退款，你不需要說明原因。為了找到這筆交易，我們需要你的付款電子郵件與帳單截圖。',
         refPlatform: '你在哪裡付款？',
         refPlatformApple: 'App Store（Apple）',
         refPlatformGoogle: 'Google Play',
@@ -737,7 +763,7 @@
           '透過 App Store 或 Google Play 的購買，由平台方負責退款。我們會先確認你是否符合資格並說明步驟；在平台允許的情況下，也可以代你提出申請。',
 
         canIntro:
-          '取消後將停止所有後續扣款。在你已付費的期間結束前，仍可繼續使用 PleasureLab Plus。',
+          '取消後將停止所有後續扣款，不需要說明原因。在你已付費的期間結束前，仍可繼續使用 PleasureLab Plus。',
         canPlan: '你目前的方案',
         canPlanMonthly: 'Plus — 月繳',
         canPlanYearly: 'Plus — 年繳',
@@ -778,9 +804,22 @@
 
         okTitle: '謝謝你，申請已送出。',
         okBodySuggestion: '每一則建議都有真人閱讀。若需要更多細節，我們會寄信給你。',
-        okBodyRefund:
-          '我們會查核這筆交易，並在兩個工作天內回覆結果；若平台端另有手續，也會一併告訴你完整步驟。',
-        okBodyCancel: '我們會以電子郵件確認取消結果。在已付費期間結束前，App 的使用不會有任何改變。',
+        okBodyRefund: '我們已經收到所有需要的資料，你不需要再做任何事。',
+        okBodyCancel: '我們已經收到所有需要的資料，你不需要再做任何事。',
+
+        nextTitle: '接下來會怎麼進行',
+        nextRef1:
+          '你的申請符合資格。所有扣款在 30 天內都適用無理由退款，我們不會追問原因。',
+        nextRef2:
+          '退款會在 7 到 14 個工作天內完成，款項退回原付款方式。發卡銀行可能還需要一兩天才會顯示。',
+        nextRef3:
+          '你不需要再做任何事，也請不要重複提交。完成後我們會立刻寄電子郵件通知你，請放心耐心等待。',
+        nextCan1:
+          '取消申請已受理。我們不會詢問原因，也不會試圖挽留你。',
+        nextCan2:
+          '取消會在 7 到 14 個工作天內完成，之後不會再有任何扣款。在已付費的期間結束前，你仍可繼續使用 PleasureLab Plus。',
+        nextCan3:
+          '你不需要再做任何事，也請不要重複提交。完成後我們會立刻寄電子郵件通知你，請放心耐心等待。',
         okTicket: '你的受理編號',
         okCopy: '複製編號',
         okCopied: '已複製',

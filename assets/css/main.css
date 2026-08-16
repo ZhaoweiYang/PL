@@ -1432,6 +1432,68 @@ a:hover {
   letter-spacing: 0.04em;
 }
 
+/* what-happens-next, shown after a refund or cancellation is submitted */
+
+.next-steps {
+  text-align: start;
+  margin: 1.75rem 0 0;
+  padding: 1.25rem 1.35rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--ok-border);
+  background: var(--ok-bg);
+}
+
+.next-steps__title {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0 0 0.9rem;
+  font-size: 0.98rem;
+  font-weight: 660;
+  color: var(--ok-text);
+}
+
+.next-steps__title svg {
+  width: 18px;
+  height: 18px;
+  flex: none;
+}
+
+.next-steps ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.8rem;
+  counter-reset: nextstep;
+}
+
+.next-steps li {
+  counter-increment: nextstep;
+  display: grid;
+  grid-template-columns: 1.5rem 1fr;
+  gap: 0.75rem;
+  align-items: start;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.next-steps li::before {
+  content: counter(nextstep);
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: 0.1rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--ok-text);
+  color: var(--bg-raised);
+  font-size: 0.76rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
 /* email fallback */
 
 .fallback {
