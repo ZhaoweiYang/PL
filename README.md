@@ -120,12 +120,22 @@ Force a locale while testing with `?lang=ja` or `?lang=zh-Hant`.
 
 ## Deployment
 
-`.github/workflows/deploy.yml` publishes the repository root to GitHub Pages on
-every push to `main` (and to the development branch), and can be run manually from
-the Actions tab.
+The live site is <https://zhaoweiyang.github.io/PL/>, published from `main` by
+`.github/workflows/deploy.yml`. The workflow runs on every push to `main` (and to
+the development branch), and can be started manually from the Actions tab.
 
 One-time setup: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
-Without that, the workflow will fail at the deploy step.
+Without that, `actions/configure-pages` fails.
+
+**Only `main` can deploy.** Enabling Pages creates a `github-pages` environment
+whose deployment-branch policy admits the default branch alone. A push to any
+other branch builds fine and then the `deploy` job is rejected in about two
+seconds — no runner, no steps, no logs, which reads like a broken workflow but is
+just the branch policy. To deploy from another branch, add it under
+**Settings → Environments → github-pages → Deployment branches and tags**.
+
+The workflow is split into `build` and `deploy` for exactly this reason: only
+`deploy` is bound to the environment, so the build half always produces logs.
 
 `.nojekyll` is present so Jekyll does not reprocess the files.
 
